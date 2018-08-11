@@ -1,9 +1,12 @@
 <?php 
 
+    //PHP Headers for Cross-Origin Resource Sharing
     header("Access-Control-Allow-Origin: *");
     header("Access-Control-Allow-Headers: access");
     header("Access-Control-Allow-Methods: GET");
     header("Access-Control-Allow-Credentials: true");
+    //
+    //header("Content-Type: application/json; charset=UTF-8");
    
    //"GetCityDetails" REST API code sample to get visitors IP ADDRESS
    function getIP() {
