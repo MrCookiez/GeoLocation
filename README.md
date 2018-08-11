@@ -7,6 +7,6 @@ data.php -> This is the API file which anyone can use to get details by IP ADDRE
 
 testjs.js -> This is another way to request the details using JAVASCRIPT use the console to see the result
 
-
+#### Live server results at --> http://teovragkos.com/geolocation/ <--
 #### Enjoy!
 
