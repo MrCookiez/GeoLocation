@@ -1,6 +1,11 @@
-   <?php 
+<?php 
+
+    header("Access-Control-Allow-Origin: *");
+    header("Access-Control-Allow-Headers: access");
+    header("Access-Control-Allow-Methods: GET");
+    header("Access-Control-Allow-Credentials: true");
    
-   //"GetCityDetails" code sample to get visitors IP ADDRESS
+   //"GetCityDetails" REST API code sample to get visitors IP ADDRESS
    function getIP() {
       foreach (array(
           'HTTP_CLIENT_IP', 
