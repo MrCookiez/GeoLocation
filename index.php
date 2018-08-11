@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 <!-- Some CSS-->
+
 <style>
     h2 {
         text-align: center;
@@ -53,7 +54,8 @@
     </div>
 
     <div id="main"></div>
-    
+
+    <!-- 3rd Party Jquery Library to test API request with JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="testjs.js"></script>
 </body>

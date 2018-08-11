@@ -4,8 +4,8 @@
 var byId = function(id) {
   return document.getElementById(id);
 };
-
-var api = "https://florinafood.gr/endouble2/data.php";
+// API URL - STAND ALONE FILE
+var api = "http://teovragkos.com/geolocation/data.php";
 
 function replaceText() {
   var xhr = new XMLHttpRequest();
@@ -15,16 +15,16 @@ function replaceText() {
     if (xhr.readyState < 4) {
       byId("main").innerHTML = "Loading..";
     }
-
+    //If request is success
     if (xhr.readyState == 4 && xhr.status == 200) {
       var json = JSON.parse(xhr.responseText);
+      //Clear main div content
       byId("main").innerHTML = "";
 
       for (var i in json) {
+        //Check request results at console
         console.log(json[i]);
       }
-
-      //target.innerHTML = json.Anytime.name;
     }
   };
   xhr.send();
