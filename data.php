@@ -1,12 +1,13 @@
 <?php 
 
-    //PHP Headers for Cross-Origin Resource Sharing
+    //PHP Headers for Cross-Origin Resource Sharing:
+    //This header indicates whether the response can be shared with resources with the given origin.
     header("Access-Control-Allow-Origin: *");
+    //This header is used in response to a preflight request to indicate which HTTP headers can be used during the actual request. 
+    //For example "Content-Type: application/json" when use JS request
     header("Access-Control-Allow-Headers: access");
+    //This header requests using GET should only retrieve data.
     header("Access-Control-Allow-Methods: GET");
-    header("Access-Control-Allow-Credentials: true");
-    //
-    //header("Content-Type: application/json; charset=UTF-8");
    
    //"GetCityDetails" REST API code sample to get visitors IP ADDRESS
    function getIP() {

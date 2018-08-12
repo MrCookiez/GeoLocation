@@ -1,5 +1,3 @@
-//MAIN
-
 //======== Shortcut for document.getElementById ========
 var byId = function(id) {
   return document.getElementById(id);
@@ -7,19 +5,20 @@ var byId = function(id) {
 // API URL - STAND ALONE FILE
 var api = "http://teovragkos.com/geolocation/data.php";
 
+//Request function (The results will be displayed in console)
 function replaceText() {
   var xhr = new XMLHttpRequest();
   xhr.open("GET", api, true);
+  //Specify the type of content of the requested page to be json
   xhr.setRequestHeader("Content-type", "application/json");
   xhr.onreadystatechange = function() {
+    //If the operation is not complete then show loading text
     if (xhr.readyState < 4) {
-      byId("main").innerHTML = "Loading..";
+      console.log("LOADING..");
     }
     //If request is success
     if (xhr.readyState == 4 && xhr.status == 200) {
       var json = JSON.parse(xhr.responseText);
-      //Clear main div content
-      byId("main").innerHTML = "";
 
       for (var i in json) {
         //Check request results at console
@@ -30,7 +29,5 @@ function replaceText() {
   xhr.send();
 }
 
-//On page Load < ---- *** IMPORTANT *** ---- >
-$(document).ready(function() {
-  $("#main").html(replaceText);
-});
+//Make the request using the above function
+replaceText();
